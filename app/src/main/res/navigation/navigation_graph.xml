@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/navigationOneFragment">
+
+    <fragment
+        android:id="@+id/navigationOneFragment"
+        android:name="com.project.jetpack.fragment.NavigationOneFragment"
+        android:label="fragment_navigation_one"
+        tools:layout="@layout/fragment_navigation_one">
+        <action
+            android:id="@+id/action_navigationOneFragment_to_navigationTwoFragment"
+            app:destination="@id/navigationTwoFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <argument
+            android:name="params"
+            android:defaultValue="default_value"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigationTwoFragment"
+        android:name="com.project.jetpack.fragment.NavigationTwoFragment"
+        android:label="fragment_navigation_two"
+        tools:layout="@layout/fragment_navigation_two" />
+</navigation>

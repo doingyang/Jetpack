@@ -1,0 +1,37 @@
+Jetpack相关
+
+一、Hilt
+Hilt 一共支持 6 个入口点，分别是：
+Application
+Activity
+Fragment
+View
+Service
+BroadcastReceiver
+其中，只有 Application 这个入口点是使用 @HiltAndroidApp 注解来声明的;
+其他的所有入口点，都是用 @AndroidEntryPoint 注解来声明的。
+Hilt 注入的字段是不可以声明成 private 的
+
+二、Lifecycle
+Lifecycle可以在Activity、Fragment、Service和 Application中使用。
+Lifecycle组件的核心作用是帮助开发者进行解耦。在自定义组件中使用Lifecycle，便于管理组件的生命周期，降低内存泄漏风险，使得组件使用起来也更加安全。
+
+三、Navigation
+Navigation Graph：一种新的xml文件，内部定义Fragment及他们之间的关系；
+NavHostFragment：一种特殊的Fragment，根据名称可以看出是一种Fragment的容器，Navigation Graph中定义的Fragment正是通过NavHostFragment来展示；
+NavController：是一个Java类，用来实现Fragment之间的跳转等操作。
+
+四、ViewModel
+ViewModel类只有一个生命周期方法，那就是onCleared()，我们通常需要在这个方法中进行一些资源的释放，避免内存泄漏。
+Activity的生命周期在变化的时候，并不会执行onCleared()。
+ViewModelProvider(this).get(MyViewModel::class.java);
+由于ViewModel脱离于Activity的生命周期，不建议向ViewModel中传入Context引用，以避免发生内存泄漏。
+如果ViewModel中必须要用到Context怎么办呢，可以将ViewModel类继承自AndroidViewModel，AndroidViewModel继承自ViewModel，并且接收Application的Context。
+ViewModel和onSaveInstanceState()还是有不同点的，onSaveInstanceState()方法一般用来存放少量的一些状态数据，并且可以持久化;
+ViewModel理论上对数据没有大小限制，但当页面被彻底销毁时，ViewModel中的数据也就不复存在了。
+
+ViewModel是以生命周期的方式存储和管理界面相关的数据。当系统销毁或重新创建Activity/Fragment的时候，那么存储在其中的数据都会消失，对于简单的数据，Activity可以通过onSaveInstanceState()方法从 onCreate() 中的捆绑包恢复其数据，但此方法仅适合可以序列化再反序列化的少量数据，而不适合数量可能较大的数据,ViewModel的出现，正好弥补了这一个不足。
+另一个问题，Activity/Fragment 经常需要进行一些异步调用,并确保在onDestroy要清理这些调用以避免潜在的内存泄漏。这就需要大量的维护工作，并且在为配置更改重新创建对象的情况下，会造成资源的浪费，因为可能需要重新发出已经发出过的调用。而ViewModel可以将该部分工作解耦出来，并且通过Lifecycle跟LiveData配合使用，可以有效避免内存泄漏。
+
+
+

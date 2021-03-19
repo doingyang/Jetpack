@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.ViewPager2Activity">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_fake_drag"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="fakeDragBy"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_frag_one"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="切换到一"
+        app:layout_constrainedWidth="true" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_frag_two"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="切换到二" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

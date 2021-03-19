@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_hilt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="HiltActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_data_store"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="DataStoreActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_nav"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="NavigationActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_view_model"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ViewModelActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_live_data"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="LiveDataActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_room"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="RoomActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_coroutines"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="CoroutinesActivity"
+        android:textAllCaps="false" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="ViewPager2Activity"
+        android:textAllCaps="false" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
