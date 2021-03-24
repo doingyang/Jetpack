@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Jetpack">
-
+        <activity android:name=".activity.Paging3Activity"></activity>
         <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,7 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".activity.HiltActivity" />
         <activity android:name=".activity.DataStoreActivity" />
         <activity android:name=".activity.NavigationActivity" />
@@ -29,7 +28,6 @@
         <activity android:name=".activity.RoomActivity" />
         <activity android:name=".activity.CoroutinesActivity" />
         <activity android:name=".activity.ViewPager2Activity" />
-
     </application>
 
 </manifest>

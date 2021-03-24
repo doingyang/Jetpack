@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     private val btnRoom: AppCompatButton by lazy { findViewById<AppCompatButton>(R.id.btn_room) }
     private val btnCoroutines: AppCompatButton by lazy { findViewById<AppCompatButton>(R.id.btn_coroutines) }
     private val btnViewPager2: AppCompatButton by lazy { findViewById<AppCompatButton>(R.id.btn_view_pager2) }
+    private val btnPaging3: AppCompatButton by lazy { findViewById<AppCompatButton>(R.id.btn_paging3) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +49,9 @@ class MainActivity : AppCompatActivity() {
         }
         btnViewPager2.setOnClickListener {
             startActivity(Intent(this, ViewPager2Activity::class.java))
+        }
+        btnPaging3.setOnClickListener {
+            startActivity(Intent(this, Paging3Activity::class.java))
         }
     }
 }

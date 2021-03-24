@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.NavOptions
 import androidx.navigation.Navigation
 import com.project.jetpack.R
@@ -23,7 +23,7 @@ private const val ARG_PARAM2 = "param2"
 class NavigationOneFragment : Fragment() {
 
     private var rootView: View? = null;
-    private val btnJump: Button by lazy { rootView!!.findViewById<Button>(R.id.btn_jump) }
+    private val btnJump: TextView by lazy { rootView!!.findViewById<TextView>(R.id.btn_jump) }
 
     // TODO: Rename and change types of parameters
     private var param1: String? = null

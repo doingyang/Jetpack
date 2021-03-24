@@ -63,4 +63,11 @@
         android:text="ViewPager2Activity"
         android:textAllCaps="false" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_paging3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Paging3Activity"
+        android:textAllCaps="false" />
+
 </androidx.appcompat.widget.LinearLayoutCompat>
